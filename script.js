@@ -1,14 +1,11 @@
 const btn = document.querySelector('#btn-color');
 const seccion_productos = document.querySelector('body');
 let isOriginalColor = true;
-let isOriginalColor2 = true;
-
 
 const btnHideShow = document.getElementById('btn-hide-show');
 const informacionSection = document.getElementById('informacion');
 const paragraphs = informacionSection.querySelectorAll('p');
-let isHidden = false; 
-
+let isHidden = false;
 
 //CAMBIO DE COLOR BOTÓN Y FONDO
 
@@ -19,27 +16,16 @@ btn.addEventListener('click', () => {
     if (isOriginalColor) {
         btn.style.backgroundColor = '#6a5850';
         btn.style.transition = '.5s ease';
-        isOriginalColor = false;    
-    } else {
-        btn.style.backgroundColor = '#28844b';
-        isOriginalColor = true;
-    } 
-});
-
-
-seccion_productos.style.backgroundColor = '#f2f2f2';
-btn.addEventListener('click', () => {
-    if (isOriginalColor2){
+        seccion_productos.style.backgroundColor = '#f2f2f2';
         seccion_productos.style.backgroundColor = '#FDF1F1';
         seccion_productos.transition = '.5s ease';
-        isOriginalColor2 = false;
+        isOriginalColor = false;
     } else {
+        btn.style.backgroundColor = '#28844b';
         seccion_productos.style.backgroundColor = '#f2f2f2';
-        isOriginalColor2 = true;
+        isOriginalColor = true;
     }
 });
-
-
 
 //MOSTRAR/OCULTAR TEXTO
 
